@@ -81,7 +81,7 @@ Where `SpacingSize` is one of: `'none' | 'xsmall' | 'small' | 'medium' | 'large'
 ### Button
 ---
 
-A customizable button component with different sizes and variants.
+A customizable button component with different sizes, variants, and indication states.
 
 #### Props
 
@@ -89,6 +89,7 @@ A customizable button component with different sizes and variants.
 |------|------|---------|-------------|
 | variant | 'primary' \| 'secondary' | 'primary' | The button's visual style |
 | size | 'xsmall' \| 'small' \| 'medium' \| 'large' | 'medium' | The button's size |
+| indication | 'success' \| 'warning' \| 'error' | - | Indication state that changes button color |
 
 #### Example
 

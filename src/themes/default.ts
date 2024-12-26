@@ -1,9 +1,9 @@
 export const COLORS = {
   // Primary colors
   primary: {
-    main: '#2E5EAA',
-    light: '#4B7BCA',
-    dark: '#1A4088',
+    main: '#0379B1',
+    light: '#0294D7',
+    dark: '#076995',
     contrast: '#FFFFFF'
   },
   // Secondary colors
@@ -15,37 +15,37 @@ export const COLORS = {
   },
   // Success colors
   success: {
-    main: '#38A169',
-    light: '#48BB78',
-    dark: '#2F855A',
+    main: '#22BABB',
+    light: '#4BCBCC', // Reduced contrast with main color
+    dark: '#348888',
     contrast: '#FFFFFF'
   },
   // Warning colors
   warning: {
-    main: '#D69E2E',
-    light: '#ECC94B',
-    dark: '#B7791F',
-    contrast: '#000000'
+    main: '#FA7F08',
+    light: '#FB9939',
+    dark: '#C66406',
+    contrast: '#FFFFFF'
   },
   // Error colors
   error: {
-    main: '#E53E3E',
-    light: '#F56565',
-    dark: '#C53030',
+    main: '#F24405',
+    light: '#F46937',
+    dark: '#C13604',
     contrast: '#FFFFFF'
   },
   // Neutral colors
   neutral: {
-    50: '#F7FAFC',
-    100: '#EDF2F7',
-    200: '#E2E8F0',
-    300: '#CBD5E0',
-    400: '#A0AEC0',
-    500: '#718096',
-    600: '#4A5568',
-    700: '#2D3748',
-    800: '#1A202C',
-    900: '#171923'
+    50: '#F5F9F9',
+    100: '#E6F0F0',
+    200: '#D1E3E3',
+    300: '#B3D1D1',
+    400: '#8CB8B8',
+    500: '#348888',
+    600: '#286666',
+    700: '#1B4444',
+    800: '#0D2222',
+    900: '#041111'
   },
   // Common colors
   common: {

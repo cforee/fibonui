@@ -7,4 +7,7 @@ export const FIBS = {
   XL: 13,
   XXL: 21,
   XXXL: 34,
+  XXXXL: 55,
+  XXXXXL: 89,
+  XXXXXXL: 144,
 } as const;

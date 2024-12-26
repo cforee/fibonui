@@ -1,5 +1,4 @@
 import React from 'react';
-import { StyledButton } from './Button.styles';
 
 export interface ButtonProps {
   variant?: 'primary' | 'secondary';
@@ -7,14 +6,23 @@ export interface ButtonProps {
   onClick?: () => void;
 }
 
-export const Button: React.FC<ButtonProps> = ({
+const getStyles = (variant: 'primary' | 'secondary') => ({
+  padding: '8px 16px',
+  borderRadius: '4px',
+  border: 'none',
+  cursor: 'pointer',
+  backgroundColor: variant === 'primary' ? '#007bff' : '#6c757d',
+  color: 'white',
+});
+
+export const Button = ({
   variant = 'primary',
   children,
   onClick,
-}) => {
+}: ButtonProps) => {
   return (
-    <StyledButton variant={variant} onClick={onClick}>
+    <button style={getStyles(variant)} onClick={onClick}>
       {children}
-    </StyledButton>
+    </button>
   );
 };

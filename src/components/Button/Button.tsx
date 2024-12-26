@@ -36,10 +36,10 @@ const sizes: Record<ButtonSize, {
     minWidth: `${FIBS.XL * FIBS.XL}px`
   },
   large: {
-    padding: `${FIBS.MD}px ${FIBS.XL+8}px ${FIBS.MD+1}px ${FIBS.XL+8}px`,
-    fontSize: `${FIBS.XXL-2}px`,
+    padding: `${FIBS.MD}px ${FIBS.XXL}px ${FIBS.MD+1}px ${FIBS.XXL}px`,
+    fontSize: `${FIBS.XXL-4}px`,
     borderRadius: `${FIBS.SM}px`,
-    minWidth: `${FIBS.XL * FIBS.XL}px`
+    minWidth: `${FIBS.XL * FIBS.LG}px`
   }
 };
 

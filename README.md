@@ -22,67 +22,11 @@ import { Button, VSpacer } from 'fibonui';
 fibonui has the following peer dependency:
 - React ≥ 18.0.0
 
-## Components
-
-### Button
-
-A customizable button component with different sizes and variants.
-
-#### Props
-
-| Prop | Type | Default | Description |
-|------|------|---------|-------------|
-| variant | 'primary' \| 'secondary' | 'primary' | The button's visual style |
-| size | 'xsmall' \| 'small' \| 'medium' \| 'large' | 'medium' | The button's size |
-
-#### Example
-
-```tsx
-<Button variant="primary" size="medium" onClick={() => alert('Clicked!')}>
-  Primary Button Medium
-</Button>
-```
-
-### HSpacer
-
-A horizontal spacer component with different sizes.
-
-#### Props
-
-| Prop | Type | Default | Description |
-|------|------|---------|-------------|
-| size | 'default' \| 'xsmall' \| 'small' \| 'medium' \| 'large' \| 'xlarge' \| 'xxlarge' \| 'xxxlarge' \| '_1' \| '_3' \| '_5' \| '_8' \| '_13' \| '_21' \| '_34' \| '_55' | 'default' | The spacer's size |
-
-#### Example
-
-```tsx
-<HSpacer size="medium" />
-<HSpacer size="_34" />
-<HSpacer /> // defaults to _1 or 1px width
-```
-
-### VSpacer
-
-A vertical spacer component with different sizes.
-
-#### Props
-
-| Prop | Type | Default | Description |
-|------|------|---------|-------------|
-| size | 'default' \| 'xsmall' \| 'small' \| 'medium' \| 'large' \| 'xlarge' \| 'xxlarge' \| 'xxxlarge' \|
-| "size" aliases | '_1' \| '_3' \| '_5' \| '_8' \| '_13' \| '_21' \| '_34' \| '_55' | 'default' | The spacer's size |
-
-#### Example
-
-```tsx
-<VSpacer size="medium" />
-<VSpacer size="_34" />
-<VSpacer /> // defaults to _1 or 1px height
-```
-
+&nbsp;
+## UI Components
 ### Container
-
-A flexible container component that supports width portioning, content alignment, borders, and Fibonacci-based spacing.
+---
+A container component which supports width portioning (allowing "grid" layout), content alignment, borders, margin, padding, etc.
 
 #### Props
 
@@ -131,4 +75,63 @@ Where `SpacingSize` is one of: `'none' | 'xsmall' | 'small' | 'medium' | 'large'
     <p>This container has medium margin and small padding</p>
   </Container>
 </>
+```
+
+&nbsp;
+### Button
+---
+
+A customizable button component with different sizes and variants.
+
+#### Props
+
+| Prop | Type | Default | Description |
+|------|------|---------|-------------|
+| variant | 'primary' \| 'secondary' | 'primary' | The button's visual style |
+| size | 'xsmall' \| 'small' \| 'medium' \| 'large' | 'medium' | The button's size |
+
+#### Example
+
+```tsx
+<Button variant="primary" size="medium" onClick={() => alert('Clicked!')}>
+  Primary Button Medium
+</Button>
+```
+&nbsp;
+### HSpacer
+---
+A horizontal spacer.
+
+#### Props
+
+| Prop | Type | Default | Description |
+|------|------|---------|-------------|
+| size | 'default' \| 'xsmall' \| 'small' \| 'medium' \| 'large' \| 'xlarge' \| 'xxlarge' \| 'xxxlarge' \| '_1' \| '_3' \| '_5' \| '_8' \| '_13' \| '_21' \| '_34' \| '_55' | 'default' | The spacer's size |
+
+#### Example
+
+```tsx
+<HSpacer size="medium" />
+<HSpacer size="_34" />
+<HSpacer /> // defaults to _1 or 1px width
+```
+
+&nbsp;
+### VSpacer
+---
+A vertical spacer.
+
+#### Props
+
+| Prop | Type | Default | Description |
+|------|------|---------|-------------|
+| size | 'default' \| 'xsmall' \| 'small' \| 'medium' \| 'large' \| 'xlarge' \| 'xxlarge' \| 'xxxlarge' \|
+| "size" aliases | '_1' \| '_3' \| '_5' \| '_8' \| '_13' \| '_21' \| '_34' \| '_55' | 'default' | The spacer's size |
+
+#### Example
+
+```tsx
+<VSpacer size="medium" />
+<VSpacer size="_34" />
+<VSpacer /> // defaults to _1 or 1px height
 ```

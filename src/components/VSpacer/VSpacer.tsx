@@ -1,8 +1,8 @@
 import React from 'react';
 import { FIBS } from '../../constants/fibonacci';
 
-type NumericSpacerSize = '_3' | '_5' | '_8' | '_13' | '_21' | '_34' | '_55';
-type NamedSpacerSize = 'xsmall' | 'small' | 'medium' | 'large' | 'xlarge' | 'xxlarge' | 'xxxlarge';
+type NumericSpacerSize = '_1' | '_3' | '_5' | '_8' | '_13' | '_21' | '_34' | '_55';
+type NamedSpacerSize = 'default' | 'xsmall' | 'small' | 'medium' | 'large' | 'xlarge' | 'xxlarge' | 'xxxlarge';
 type SpacerSize = NumericSpacerSize | NamedSpacerSize;
 
 export interface VSpacerProps {
@@ -10,6 +10,7 @@ export interface VSpacerProps {
 }
 
 const sizeMap: Record<NamedSpacerSize, NumericSpacerSize> = {
+  default: '_1',
   xsmall: '_3',
   small: '_5',
   medium: '_8',
@@ -22,6 +23,9 @@ const sizeMap: Record<NamedSpacerSize, NumericSpacerSize> = {
 const sizes: Record<NumericSpacerSize, {
   height: string;
 }> = {
+  _1: {
+    height: '1px'
+  },
   _3: {
     height: `${FIBS.SM}px`
   },
@@ -45,7 +49,7 @@ const sizes: Record<NumericSpacerSize, {
   }
 };
 
-const getStyles = (size: SpacerSize = '_8') => {
+const getStyles = (size: SpacerSize = 'default') => {
   const numericSize = (sizeMap as Record<string, NumericSpacerSize>)[size] || size as NumericSpacerSize;
   return {
     ...sizes[numericSize],
@@ -55,7 +59,7 @@ const getStyles = (size: SpacerSize = '_8') => {
 };
 
 export const VSpacer = ({
-  size = '_8'
+  size = 'default'
 }: VSpacerProps) => {
   return <div style={getStyles(size)} />;
 };

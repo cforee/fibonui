@@ -49,13 +49,16 @@ const getStyles = (variant: ButtonProps['variant'], size: ButtonSize = 'medium')
   cursor: 'pointer',
   backgroundColor: variant === 'primary' ? '#007bff' : '#6c757d',
   color: 'white',
-  transition: 'all 0.2s ease-in-out',
+  transition: 'all 0.1s ease-in-out',
   fontFamily: 'inherit',
   lineHeight: '1.5',
   textAlign: 'center' as const,
   display: 'inline-flex',
   alignItems: 'center',
-  justifyContent: 'center'
+  justifyContent: 'center',
+  '&:hover': {
+    filter: 'brightness(95%)',
+  }
 });
 
 export const Button = ({
@@ -65,7 +68,20 @@ export const Button = ({
   size = 'medium'
 }: ButtonProps) => {
   return (
-    <button style={getStyles(variant, size)} onClick={onClick}>
+    <button
+      style={getStyles(variant, size)}
+      onClick={onClick}
+      onMouseOver={(e) => {
+        const target = e.currentTarget;
+        target.style.filter = 'brightness(95%)';
+      }}
+      onMouseOut={(e) => {
+        const target = e.currentTarget;
+        target.style.filter = 'none';
+        target.style.transform = 'none';
+        target.style.boxShadow = 'none';
+      }}
+    >
       {children}
     </button>
   );

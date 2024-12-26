@@ -79,3 +79,56 @@ A vertical spacer component with different sizes.
 <VSpacer size="_34" />
 <VSpacer /> // defaults to _1 or 1px height
 ```
+
+### Container
+
+A flexible container component that supports width portioning, content alignment, borders, and Fibonacci-based spacing.
+
+#### Props
+
+| Prop | Type | Default | Description |
+|------|------|---------|-------------|
+| portionWidth | '1_1' \| '1_2' \| '1_3' \| '1_4' \| '1_5' \| '1_6' | '1_1' | Width as a fraction of parent |
+| contentAlignment | 'left' \| 'center' \| 'right' | 'left' | Horizontal content alignment |
+| hasBorder | boolean | false | Whether to show border |
+| borderWidth | number | 1 | Border width in pixels |
+| borderColor | string | '#000' | Border color |
+| margin | SpacingSize | 'none' | Margin on all sides |
+| lrmargin | SpacingSize | - | Left and right margin |
+| tbmargin | SpacingSize | - | Top and bottom margin |
+| lmargin | SpacingSize | - | Left margin |
+| rmargin | SpacingSize | - | Right margin |
+| tmargin | SpacingSize | - | Top margin |
+| bmargin | SpacingSize | - | Bottom margin |
+| padding | SpacingSize | 'none' | Padding on all sides |
+| lrpadding | SpacingSize | - | Left and right padding |
+| tbpadding | SpacingSize | - | Top and bottom padding |
+| lpadding | SpacingSize | - | Left padding |
+| rpadding | SpacingSize | - | Right padding |
+| tpadding | SpacingSize | - | Top padding |
+| bpadding | SpacingSize | - | Bottom padding |
+
+Where `SpacingSize` is one of: `'none' | 'xsmall' | 'small' | 'medium' | 'large' | 'xlarge'`
+
+#### Example
+
+```tsx
+<>
+  <Container hasBorder borderWidth={8} borderColor="#f3f3f3" contentAlignment="center" portionWidth="1_3">
+    <h1>column one</h1>
+  </Container>
+  <Container hasBorder borderWidth={8} borderColor="#f3f3f3" contentAlignment="center" portionWidth="1_3">
+    <h1>column two</h1>
+  </Container>
+  <Container hasBorder borderWidth={8} borderColor="#f3f3f3" contentAlignment="center" portionWidth="1_3">
+    <h1>column three</h1>
+  </Container>
+</>
+
+<>
+  <Container margin="medium" padding="small" lrpadding="large">
+    <h1>Container with spacing</h1>
+    <p>This container has medium margin and small padding</p>
+  </Container>
+</>
+```

@@ -43,6 +43,24 @@ A customizable button component with different sizes and variants.
 </Button>
 ```
 
+### HSpacer
+
+A horizontal spacer component with different sizes.
+
+#### Props
+
+| Prop | Type | Default | Description |
+|------|------|---------|-------------|
+| size | 'default' \| 'xsmall' \| 'small' \| 'medium' \| 'large' \| 'xlarge' \| 'xxlarge' \| 'xxxlarge' \| '_1' \| '_3' \| '_5' \| '_8' \| '_13' \| '_21' \| '_34' \| '_55' | 'default' | The spacer's size |
+
+#### Example
+
+```tsx
+<HSpacer size="medium" />
+<HSpacer size="_34" />
+<HSpacer /> // defaults to _1 or 1px width
+```
+
 ### VSpacer
 
 A vertical spacer component with different sizes.

@@ -1,5 +1,6 @@
 import React from 'react';
 import { FIBS } from '../../constants/fibonacci';
+import { COLORS } from '../../themes/default';
 
 type SpacingSize = 'none' | 'xsmall' | 'small' | 'medium' | 'large' | 'xlarge';
 type AlignContent = 'left' | 'center' | 'right';
@@ -59,7 +60,7 @@ const getStyles = ({
   contentAlignment = 'left',
   hasBorder,
   borderWidth = 1,
-  borderColor = '#000',
+  borderColor = COLORS.neutral[300],
   margin,
   lrmargin,
   tbmargin,

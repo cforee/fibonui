@@ -1,5 +1,6 @@
 import React from 'react';
 import { FIBS } from '../../constants/fibonacci';
+import { COLORS } from '../../themes/default';
 
 type ButtonSize = 'xsmall' | 'small' | 'medium' | 'large';
 type ButtonVariant = 'primary' | 'secondary';
@@ -47,8 +48,8 @@ const getStyles = (variant: ButtonProps['variant'], size: ButtonSize = 'medium')
   ...sizes[size],
   border: 'none',
   cursor: 'pointer',
-  backgroundColor: variant === 'primary' ? '#007bff' : '#6c757d',
-  color: 'white',
+  backgroundColor: variant === 'primary' ? COLORS.primary.main : COLORS.secondary.main,
+  color: variant === 'primary' ? COLORS.primary.contrast : COLORS.secondary.contrast,
   transition: 'all 0.1s ease-in-out',
   fontFamily: 'inherit',
   lineHeight: '1.5',
@@ -57,7 +58,10 @@ const getStyles = (variant: ButtonProps['variant'], size: ButtonSize = 'medium')
   alignItems: 'center',
   justifyContent: 'center',
   '&:hover': {
-    filter: 'brightness(95%)',
+    backgroundColor: variant === 'primary' ? COLORS.primary.light : COLORS.secondary.light,
+  },
+  '&:active': {
+    backgroundColor: variant === 'primary' ? COLORS.primary.dark : COLORS.secondary.dark,
   }
 });
 
@@ -73,13 +77,11 @@ export const Button = ({
       onClick={onClick}
       onMouseOver={(e) => {
         const target = e.currentTarget;
-        target.style.filter = 'brightness(95%)';
+        target.style.backgroundColor = variant === 'primary' ? COLORS.primary.light : COLORS.secondary.light;
       }}
       onMouseOut={(e) => {
         const target = e.currentTarget;
-        target.style.filter = 'none';
-        target.style.transform = 'none';
-        target.style.boxShadow = 'none';
+        target.style.backgroundColor = variant === 'primary' ? COLORS.primary.main : COLORS.secondary.main;
       }}
     >
       {children}
